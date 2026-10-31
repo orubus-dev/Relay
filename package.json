@@ -28,7 +28,7 @@
     "@noble/hashes": "^1.8.0",
     "@supabase/supabase-js": "^2.108.1",
     "@tailwindcss/vite": "^4.1.14",
-    "@vitejs/plugin-react": "^5.0.4",
+    "@vitejs/plugin-react": "^6.1.2",
     "dotenv": "^17.2.3",
     "express": "^4.21.2",
     "lucide-react": "^0.546.0",
