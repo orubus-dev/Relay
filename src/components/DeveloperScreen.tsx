@@ -1003,7 +1003,7 @@ function renderPreview(text: string, businessName: string): string {
     .replaceAll('{{username}}', 'orubus')
     .replaceAll('{{business}}', businessName)
     .replaceAll('{{code}}', '482913')
-    .replaceAll('{{link}}', 'https://relay-orubus.pages.dev/v1/auth/magic-link/…')
+    .replaceAll('{{link}}', 'https://relayid.pages.dev/v1/auth/magic-link/…')
     .replaceAll('{{ttl}}', '60');
 }
 

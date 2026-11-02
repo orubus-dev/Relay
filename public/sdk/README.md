@@ -46,7 +46,7 @@ const token = await fetch("/your-api/relay-token", { method: "POST" }).then((r) 
 
 // 2) connect — generates the X3DH identity on this device and registers it
 import { RelayClient } from "./relay-sdk.mjs";
-const relay = new RelayClient({ appId: "rl_your_app_id", baseUrl: "https://relay-orubus.pages.dev/v1" });
+const relay = new RelayClient({ appId: "rl_your_app_id", baseUrl: "https://relayid.pages.dev/v1" });
 const { external_id } = await relay.connectWithToken(token);
 
 // 3) send — the first message runs the X3DH handshake, then the ratchet takes over

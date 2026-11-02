@@ -15,7 +15,7 @@ export function getPublicWebOrigin(): string {
     const origin = window.location.origin;
     if (!origin.includes("localhost") && origin.startsWith("https://")) return origin;
   }
-  return "https://relay-orubus.pages.dev";
+  return "https://relayid.pages.dev";
 }
 
 export function getAuthRedirectUrl(): string {

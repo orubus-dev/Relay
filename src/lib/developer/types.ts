@@ -117,9 +117,9 @@ export const TEMPLATE_PLACEHOLDERS = [
   { token: '{{username}}', sample: 'orubus', description: "Recipient's @username" },
   { token: '{{business}}', sample: 'Konoha Corp', description: 'Your business display name' },
   { token: '{{code}}', sample: '482913', description: 'One-time code (OTP templates)' },
-  { token: '{{link}}', sample: 'https://relay-orubus.pages.dev/v1/auth/magic-link/…', description: 'Sign-in link (magic link templates)' },
+  { token: '{{link}}', sample: 'https://relayid.pages.dev/v1/auth/magic-link/…', description: 'Sign-in link (magic link templates)' },
   { token: '{{ttl}}', sample: '60', description: 'Lifetime of the code or link, in seconds' },
 ] as const;
 
 export const SDK_PACKAGE = '@relay/messaging-sdk';
-export const API_BASE = 'https://relay-orubus.pages.dev/v1';
+export const API_BASE = 'https://relayid.pages.dev/v1';
