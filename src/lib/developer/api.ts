@@ -78,7 +78,7 @@ export async function lookupGenjutsuBusiness(
   const handle = rawHandle.trim().toLowerCase().replace(/\.auth$/, '');
   if (!/^[a-z0-9_]{2,30}$/.test(handle)) throw new Error('That is not a valid Genjutsu business handle.');
   const env = (import.meta as { env?: Record<string, string> }).env ?? {};
-  const base = env.VITE_GENJUTSU_URL || 'https://genjutsu-umber.vercel.app';
+  const base = env.VITE_GENJUTSU_URL || 'https://genjutsu-orubus.pages.dev';
   const key = env.VITE_GENJUTSU_PUBLISHABLE_KEY;
   if (!key) throw new Error('Genjutsu sync is not configured (VITE_GENJUTSU_PUBLISHABLE_KEY missing).');
   const res = await fetch(
