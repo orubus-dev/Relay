@@ -27,7 +27,7 @@ export function getPublicWebOrigin(): string {
     const origin = window.location.origin;
     if (!origin.includes('localhost') && origin.startsWith('https://')) return origin;
   }
-  return 'https://relayid.vercel.app';
+  return 'https://relay-orubus.pages.dev';
 }
 
 export function getAuthRedirectUrl(): string {

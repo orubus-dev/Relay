@@ -7,7 +7,7 @@ import { RELAY_WEB_VERSION } from "../lib/version";
 const CURRENT = (import.meta as any).env?.VITE_APP_VERSION || RELAY_WEB_VERSION;
 const CHECK_URL =
   (import.meta as any).env?.VITE_UPDATE_CHECK_URL ||
-  "https://relay-sandy-seven.vercel.app/version.json";
+  "https://relay-orubus.pages.dev/version.json";
 const DOWNLOAD_LOCK_KEY = "relay_update_download_lock";
 
 export type UpdateInfo = {

@@ -145,7 +145,7 @@ Deno.serve(async (req) => {
   // Vercel's /v1/auth/:path* rewrite strips the auth/ prefix; the direct
   // Supabase URL keeps it. Accept both.
   const route = rawRoute.startsWith("auth/") ? rawRoute.slice(5) : rawRoute;
-  const publicOrigin = Deno.env.get("PUBLIC_ORIGIN") ?? "https://relayid.vercel.app";
+  const publicOrigin = Deno.env.get("PUBLIC_ORIGIN") ?? "https://relay-orubus.pages.dev";
 
   async function resolveApp(body: { client_id?: string; client_secret?: string }): Promise<AppRow | null> {
     const secret = body.client_secret ?? bearer(req);

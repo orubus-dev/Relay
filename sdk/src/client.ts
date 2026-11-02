@@ -124,7 +124,7 @@ type StoredSession = {
 export type RelayClientOptions = {
   /** developer app id, `rl_…` */
   appId: string;
-  /** gateway base, e.g. https://relayid.vercel.app/v1 */
+  /** gateway base, e.g. https://relay-orubus.pages.dev/v1 */
   baseUrl: string;
   /** persistence for keys + sessions (defaults to localStorage/memory) */
   store?: KvStore;
@@ -149,7 +149,7 @@ export class RelayClient {
 
   constructor(opts: RelayClientOptions) {
     if (!opts.appId?.startsWith("rl_")) throw new Error("appId must be your `rl_…` client id");
-    if (!opts.baseUrl) throw new Error("baseUrl is required, e.g. https://relayid.vercel.app/v1");
+    if (!opts.baseUrl) throw new Error("baseUrl is required, e.g. https://relay-orubus.pages.dev/v1");
     this.appId = opts.appId;
     this.baseUrl = opts.baseUrl.replace(/\/$/, "");
     this.store = opts.store ?? defaultStore();

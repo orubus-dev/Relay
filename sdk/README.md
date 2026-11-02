@@ -10,7 +10,7 @@ is the hidden plumber: it routes ciphertext envelopes and nothing else.
 ```
 your app                      relay (hidden plumber)
 ┌──────────────┐   envelopes  ┌─────────────────────┐
-│ RelayClient  │ ───────────▶ │ relayid.vercel.app  │ ─▶ recipient's devices
+│ RelayClient  │ ───────────▶ │ relay-orubus.pages.dev  │ ─▶ recipient's devices
 │ (WebCrypto)  │ ◀─────────── │ /v1/*               │
 └──────────────┘   envelopes  └─────────────────────┘
         ▲ user token minted by YOUR backend with RelayServer
@@ -102,17 +102,17 @@ whole OAuth surface lives on our domain:
 
 | endpoint  | url                                          |
 | --------- | -------------------------------------------- |
-| authorize | `https://relayid.vercel.app/consent`         |
-| token     | `https://relayid.vercel.app/v1/oauth/token`  |
-| userinfo  | `https://relayid.vercel.app/v1/oauth/userinfo` |
-| redirect  | `https://relayid.vercel.app/v1/redirect`     |
+| authorize | `https://relay-orubus.pages.dev/consent`         |
+| token     | `https://relay-orubus.pages.dev/v1/oauth/token`  |
+| userinfo  | `https://relay-orubus.pages.dev/v1/oauth/userinfo` |
+| redirect  | `https://relay-orubus.pages.dev/v1/redirect`     |
 
 OAuth 2.0 with PKCE (S256), exactly like "Continue with Google".
 
 ## API reference
 
 ### `new RelayClient({ appId, baseUrl?, keyPrefix? })`
-`baseUrl` defaults to `https://relayid.vercel.app/v1`.
+`baseUrl` defaults to `https://relay-orubus.pages.dev/v1`.
 
 ### client methods
 - `connectWithToken(token)` → `{ externalId }` — register/refresh the device key bundle

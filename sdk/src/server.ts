@@ -49,7 +49,7 @@ export class RelayServer {
     if (!opts.appSecret?.startsWith("rs_")) throw new Error("appSecret must be your `rs_…` client secret");
     this.appId = opts.appId;
     this.appSecret = opts.appSecret;
-    this.baseUrl = (opts.baseUrl ?? "https://relayid.vercel.app/v1").replace(/\/$/, "");
+    this.baseUrl = (opts.baseUrl ?? "https://relay-orubus.pages.dev/v1").replace(/\/$/, "");
     this.fetchImpl = opts.fetch ?? fetch.bind(globalThis);
   }
 
