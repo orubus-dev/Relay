@@ -30,8 +30,10 @@ jobs:
           VITE_GENJUTSU_PUBLISHABLE_KEY: ${{ secrets.VITE_GENJUTSU_PUBLISHABLE_KEY }}
         run: npm run build:web
 
-      - name: Add SPA fallback
-        run: printf '/* /index.html 200\n' > dist/_redirects
+      # NOTE: no dist/_redirects SPA rule — _redirects is evaluated BEFORE
+      # Pages Functions and would shadow the same-origin auth proxy in
+      # functions/. Pages' built-in SPA fallback (index.html, no 404.html)
+      # already serves unknown routes.
 
       - name: Deploy to Cloudflare Pages
         uses: cloudflare/wrangler-action@v3
