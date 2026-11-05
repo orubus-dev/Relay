@@ -1,0 +1,4 @@
+project_id = "relay"
+
+[functions.auth-challenge]
+verify_jwt = false
